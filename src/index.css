@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.submit-btn {
+    border: 1.5px solid #ffffff;
+    letter-spacing: 1.5px;
+    color: white;
+    background: none;
+    padding: 4px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .submit-btn:hover {
+    color: black;
+  }
+
+  .submit-btn::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: #fff8f8;
+    transition: 0.5s;
+    z-index: -1;
+  }
+
+  .submit-btn::before {
+    right: 0;
+    top: 0;
+  }
+
+  .submit-btn:hover::before {
+    width: 180%;
+  }
